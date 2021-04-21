@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Interativo</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <div id="logo">Jogo da forca</div>
+
+    <div id="menu_inicial">
+        <input onclick="habilitarComeco(), habilitarPalavra(true)" type="radio" name="quantidade_jogadores" value="1">1 Jogador
+        <input onclick="habilitarComeco(), habilitarPalavra(false)" on type="radio" name="quantidade_jogadores" value="2">2 Jogadores
+        <br>
+        <input id="palavra_secreta" type="text" disabled=true placeholder="palavra secreta">
+        <br>
+        <input id="button_start" onclick="comecarJogo()" type="button" value="Começar" disabled=true>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var lista_de_palavras = ['ARANHA', 'BORBOLETA', 'CACHORRO', 'DINOSSAURO', 'ELEFANTE']
+        var palavra_secreta = ''
+        var jogadores = 0
+        function habilitarComeco(){
+            document.getElementById('button_start').disabled = false
+        }
+        function habilitarPalavra(estado){
+            document.getElementById('palavra_secreta').disabled = estado
+        }
+
+        function comecarJogo(){
+            console.log("entrei aqui")
+            var quantidade_jogadores = document.getElementsByName('quantidade_jogadores')
+            for(var i=0; i<quantidade_jogadores.length; i++){
+                if(quantidade_jogadores[i].checked){
+                    jogadores = quantidade_jogadores[i].value
+                }
+            }
+
+            if(jogadores == 1){
+                var posicao_palavra = parseInt(Math.random() * lista_de_palavras.length)
+                palavra_secreta = (lista_de_palavras[posicao_palavra])
+            } else{
+                palavra_secreta = document.getElementById('palavra_secreta').value
+                palavra_secreta = palavra_secreta.toUpperCase()
+            }
+
+            sessionStorage.clear()
+            sessionStorage.setItem("jogadores", jogadores)
+            sessionStorage.setItem("palavra_secreta", palavra_secreta)
+            window.location.href = "jogando.html"
+        }
+        
+        
+        
+    </script>
+</body>
+</html>

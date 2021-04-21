@@ -1,0 +1,44 @@
+/*Seletores*/
+
+body{
+    background-image: url("imagens/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    color: blue;
+}
+
+input{
+    margin: 5px;
+}
+
+
+
+/*Id's*/
+
+#logo{
+    text-align: center;
+    font-size: 3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #FFF;
+    text-shadow: 2px 2px rgb(83, 83, 83);
+}
+
+#menu_inicial{
+    border: 1px solid red;
+    margin: auto;
+    width: 210px;
+    text-align: center;
+    position: relative;
+    top: 250px;
+
+}
+
+
+
+
+
+
+/*Classes*/
