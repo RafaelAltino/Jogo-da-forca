@@ -1,7 +1,7 @@
 /*Seletores*/
 
 body{
-    background-image: url("imagens/background2.jpg");
+    background-image: url("imagens/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -27,7 +27,6 @@ input{
 }
 
 #menu_inicial{
-    border: 1px solid red;
     margin: auto;
     width: 210px;
     text-align: center;
@@ -36,9 +35,48 @@ input{
 
 }
 
+#area-jogo{
+    padding: 10px;
+    border:  1px solid red;
 
+}
 
+#area-forca-palavra{
+    padding: 10px;
+    border: 1px solid black;
+    height: 380px;
+}
 
+#area-forca{
+    border: 1px solid purple;
+    width: 380px;
+    height: 380px;
+    float: left;
+}
 
+#area-palavra{
+    border: 1px solid #ff5100;
+    width: 750px;
+    height: 230px;
+    float: right;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 150px;
+}
+
+#area-chutes{
+    border: 1px solid yellow;
+    height: 70px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+#imagem_forca{
+    border: 1px solid black;
+    width: 380px;
+}
 
 /*Classes*/

@@ -9,10 +9,22 @@
 </head>
 <body>
     <div id="logo">Jogo da forca</div>
-    <div id="forca"></div>
-    <div id="palavra_adivinhando"></div>
-    <img src="imagens/forca0.png">
-    <img src="imagens/carinhaMorto.png">
+    <div id="area-jogo">
+        <div id="area-forca-palavra">
+            <div id="area-forca">
+                <img id="imagem_forca" src="imagens/forca_0.png">
+            </div><!--Fim da area-forca-->
+            <div id="area-palavra">
+
+            </div><!--Fim da aera-palavra-->
+        </div><!--Fim da area-forca-palavra-->
+        <div id="area-chutes">
+            <input id="chute" type="text" placeholder="digite uma letra">
+            <button onclick="enviarChute()">Confirmar</button><br>
+            <input id="chutes-errados" type="text" disabled=true>
+        </div><!--Fim da area-chutes-->
+    </div> <!--Fim da area-jogo-->
+    
     
 
 
@@ -30,16 +42,6 @@
 
 
 
-    <script>
-        var jogadores = sessionStorage.getItem("jogadores")
-        var palavra_sercreta = sessionStorage.getItem("palavra_secreta")
-
-
-
-
-
-        console.log(jogadores)
-        console.log(palavra_sercreta)
-    </script>
+    <script src="interacao_jogando.js"></script>
 </body>
 </html>
