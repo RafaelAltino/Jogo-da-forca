@@ -7,7 +7,7 @@
     <title>Site Interativo</title>
     <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
-<body>
+<body onload="exibirPalavra()">
     <div id="logo">Jogo da forca</div>
     <div id="area-jogo">
         <div id="area-forca-palavra">
@@ -19,7 +19,7 @@
             </div><!--Fim da aera-palavra-->
         </div><!--Fim da area-forca-palavra-->
         <div id="area-chutes">
-            <input id="chute" type="text" placeholder="digite uma letra">
+            <input id="chute-letra" type="text" placeholder="digite uma letra">
             <button onclick="enviarChute()">Confirmar</button><br>
             <input id="chutes-errados" type="text" disabled=true>
         </div><!--Fim da area-chutes-->

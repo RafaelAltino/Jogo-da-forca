@@ -45,6 +45,7 @@ input{
     padding: 10px;
     border: 1px solid black;
     height: 380px;
+
 }
 
 #area-forca{
@@ -56,9 +57,9 @@ input{
 
 #area-palavra{
     border: 1px solid #ff5100;
-    width: 750px;
+
     height: 230px;
-    float: right;
+
     text-align: center;
     font-size: 3em;
     font-weight: bold;
