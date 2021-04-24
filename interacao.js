@@ -1,5 +1,5 @@
-var lista_de_palavras = ['ARANHA', 'BORBOLETA', 'CACHORRO', 'DINOSSAURO', 'ELEFANTE']
-var palavra_secreta = 'Vazia'
+var lista_de_palavras = ['ARANHA', 'BORBOLETA', 'CACHORRO', 'DINOSSAURO', 'ELEFANTE', 'FORMIGA', 'GORILA', 'HIPOPOTAMO', 'IGUANA', 'JACARE', 'LEOPARDO', 'MARIPOSA', 'NAJA', 'OVELHA', 'PERU', 'QUATI', 'RINOCERONTE', 'SALAMANDRA', 'TOURO', 'URSO', 'VEADO', 'XEXEU', 'ZEBRA']
+var palavra_secreta = 'VAZIA'
 var jogadores = 0
 function habilitarComeco(){
     document.getElementById('button_start').disabled = false
@@ -9,7 +9,6 @@ function habilitarPalavra(estado){
 }
 
 function comecarJogo(){
-    console.log("entrei aqui")
     var quantidade_jogadores = document.getElementsByName('quantidade_jogadores')
     for(var i=0; i<quantidade_jogadores.length; i++){
         if(quantidade_jogadores[i].checked){

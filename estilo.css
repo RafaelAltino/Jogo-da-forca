@@ -6,15 +6,10 @@ body{
     background-size: cover;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-h1{
-    color: blue;
-}
 
 input{
     margin: 5px;
 }
-
-
 
 /*Id's*/
 
@@ -37,29 +32,27 @@ input{
 
 #area-jogo{
     padding: 10px;
-    border:  1px solid red;
+    /*border:  1px solid red;*/
 
 }
 
 #area-forca-palavra{
     padding: 10px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     height: 380px;
 
 }
 
 #area-forca{
-    border: 1px solid purple;
+    /*border: 1px solid purple;*/
     width: 380px;
     height: 380px;
     float: left;
 }
 
 #area-palavra{
-    border: 1px solid #ff5100;
-
+    /*border: 1px solid #ff5100;*/
     height: 230px;
-
     text-align: center;
     font-size: 3em;
     font-weight: bold;
@@ -68,7 +61,7 @@ input{
 }
 
 #area-chutes{
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
     height: 70px;
     width: 300px;
     margin: auto;
@@ -76,8 +69,11 @@ input{
 }
 
 #imagem_forca{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 380px;
 }
 
-/*Classes*/
+#btn-jogar-novamente{
+    padding: 3px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
