@@ -4,24 +4,46 @@ var palavra_secreta = sessionStorage.getItem("palavra_secreta")
 var palavra_adivinhando = Array()
 var total_erros = 0
 for(var i=0; i<palavra_secreta.length; i++){
-    palavra_adivinhando[i] = '_'
+    if(palavra_secreta[i] == ' '){
+        palavra_adivinhando[i] = '&nbsp;'
+    }else{
+        palavra_adivinhando[i] = '_'
+    }
+    
+}
+
+function verificarChute(chute){
+    if(chute.length >= 2){
+        alert("Digite apenas uma letra")
+        return false
+    } else if(chute == ''){
+        alert("Campo vazio")
+        return false
+    } else{
+        return true
+    }
 }
 
 function enviarChute(){
     var letra = document.getElementById('chute-letra').value
     letra = letra.toUpperCase()
-    var acertou = 0
-    for(var i in palavra_secreta){
-        if(palavra_secreta[i] == letra){
-            palavra_adivinhando[i] = letra
-            acertou = 1
-        }       
+    if(verificarChute(letra)){
+        var acertou = 0
+        for(var i in palavra_secreta){
+            if(palavra_secreta[i] == letra){
+                palavra_adivinhando[i] = letra
+                acertou = 1
+            }       
+        }
+        if(acertou == 0){
+            contabilizarErro()
+        }
+        exibirPalavra()
+        verificarFim()
+    } else{       
+        document.getElementById('chute-letra').value = ''
     }
-    if(acertou == 0){
-        contabilizarErro()
-    }
-    exibirPalavra()
-    verificarFim()
+    
 } /*Fim da função enviarChute*/
 
 function exibirPalavra(){
@@ -30,6 +52,7 @@ function exibirPalavra(){
         html_palavra += palavra_adivinhando[i] + ' '
     }
     document.getElementById('area-palavra').innerHTML = html_palavra
+    console.log(html_palavra)
     document.getElementById('chute-letra').value = ''
 } /*Fim da função exibirPalavra*/
 
@@ -63,13 +86,18 @@ function contabilizarErro(){
 function verificarFim(){
     var palavra_auxiliar = ''
     for(var i=0; i<palavra_adivinhando.length; i++){
-        palavra_auxiliar += palavra_adivinhando[i]
+        if(palavra_adivinhando[i] == '&nbsp;'){
+            palavra_auxiliar += ' '
+        } else{
+            palavra_auxiliar += palavra_adivinhando[i]
+        }
+        
     }
     if(total_erros == 5){
         exibirDerrota()
     } else if(palavra_auxiliar == palavra_secreta){
         exibirVitoria()
-    }
+    }  
 } /*Fim da função verificarFim*/
 
 function exibirVitoria(){
@@ -85,10 +113,11 @@ function exibirDerrota(){
         if(palavra_adivinhando[i] == '_'){
             palavra_auxiliar += '<span style="color: red;">' + palavra_secreta[i] + '</span> '
         } else{
-            palavra_auxiliar += palavra_secreta[i] + ' '
+            palavra_auxiliar += palavra_adivinhando[i] + ' '
         }
     }
-    
+    console.log(palavra_adivinhando)
+    console.log(palavra_auxiliar)
     document.getElementById('area-palavra').innerHTML = palavra_auxiliar
     document.getElementById('chute-letra').value = ''
     jogarNovamente()

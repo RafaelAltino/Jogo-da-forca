@@ -21,7 +21,12 @@ function comecarJogo(){
         palavra_secreta = (lista_de_palavras[posicao_palavra])
     } else{
         palavra_secreta = document.getElementById('palavra_secreta').value
+        palavra_secreta = palavra_secreta.trim()
         palavra_secreta = palavra_secreta.toUpperCase()
+        if(palavra_secreta == ''){
+            alert("Por favor preencha o campo: Palavra Secreta")
+            return
+        }
     }
 
     sessionStorage.clear()
