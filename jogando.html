@@ -8,17 +8,17 @@
     <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body onload="exibirPalavra()">
-    <div id="logo">Jogo da forca</div>
-    <div id="area-jogo">
-        <div id="area-forca-palavra">
-            <div id="area-forca">
+    <div id="logo">Jogo da forca</div><!--Div que vai exibir o título do jogo e o resultado-->
+    <div id="area-jogo"><!--Div que contem a área de feedback do jogo e a área dos chutes-->
+        <div id="area-forca-palavra"><!--Div que contem a Div da imagem e a div do desenho-->
+            <div id="area-forca"><!--Div que contem a imagem com a quantidade de vidas-->
                 <img id="imagem_forca" src="imagens/forca_0.png">
             </div><!--Fim da area-forca-->
-            <div id="area-palavra">
+            <div id="area-palavra"><!--Div que contem o processo de advinhação da palavra-->
                 
             </div><!--Fim da aera-palavra-->
         </div><!--Fim da area-forca-palavra-->
-        <div id="area-chutes">
+        <div id="area-chutes"><!--Div que contem o input de chutes e os que foram errados-->
             <input id="chute-letra" type="text" placeholder="digite uma letra">
             <button onclick="enviarChute()">Confirmar</button><br>
             <input id="chutes-errados" type="text" disabled=true>

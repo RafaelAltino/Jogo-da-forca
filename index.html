@@ -8,9 +8,9 @@
     <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-    <div id="logo">Jogo da forca</div>
+    <div id="logo">Jogo da forca</div><!--Área de titulo do jogo-->
 
-    <div id="menu_inicial">
+    <div id="menu_inicial"><!--Div contendo botões de: 1 jogador, para palavra aleatória de uma lista, 2 jogadores, para inserir manualmete a palavra -->
         <input onclick="habilitarComeco(), habilitarPalavra(true)" type="radio" name="quantidade_jogadores" value="1">1 Jogador
         <input onclick="habilitarComeco(), habilitarPalavra(false)" on type="radio" name="quantidade_jogadores" value="2">2 Jogadores
         <br>
@@ -18,19 +18,6 @@
         <br>
         <input id="button_start" onclick="comecarJogo()" type="button" value="Começar" disabled=true>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="interacao.js"></script>
 </body>
